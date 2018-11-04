@@ -4,7 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Game Master
+  - GameMaster
   layers:
   - Default
   - TransparentFX

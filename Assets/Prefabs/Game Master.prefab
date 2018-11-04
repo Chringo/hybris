@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 114101246495385658}
   m_Layer: 0
   m_Name: Game Master
-  m_TagString: Game Master
+  m_TagString: GameMaster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38,7 +38,7 @@ GameObject:
   m_Layer: 0
   m_Name: Spawn Point
   m_TagString: Untagged
-  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -84,3 +84,4 @@ MonoBehaviour:
     type: 2}
   spawnPoint: {fileID: 4521647339364248}
   spawnDelay: 2
+  restartDelay: 1
