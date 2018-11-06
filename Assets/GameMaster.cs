@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameMaster : MonoBehaviour
 {
@@ -14,8 +15,6 @@ public class GameMaster : MonoBehaviour
 
     private void Start()
     {
-        gameHasEnded = false;
-
         if (gm == null)
         {
             gm = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
@@ -37,24 +36,27 @@ public class GameMaster : MonoBehaviour
     public void LevelCompleted()
     {
         Debug.Log("LEVEL COMPLETED");
-        // EndGame();
+
+        RestartGame();
     }
 
-    public void EndGame()
+    public void GameOver()
     {
+        Debug.Log("GAME OVER");
+
         if (gameHasEnded == false)
         {
             gameHasEnded = true;
-            Debug.Log("GAME OVER");
-            Restart();
+
+            RestartGame();
         }
     }
 
-    private void Restart()
+    private void RestartGame()
     {
         Debug.Log("RESTART CURRENT SCENE");
 
-        // TODO: Restart the current scene
-        // SceneManager.LoadScene(SceneManager.GetActiveScene().name)
+        gameHasEnded = false;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
